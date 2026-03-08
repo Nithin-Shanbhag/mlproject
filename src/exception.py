@@ -1,6 +1,6 @@
 import sys
 ## Testing
-import logging
+from src.logger import logging
 
 
 
@@ -31,4 +31,4 @@ if __name__=="__main__":
     except Exception as e:
         logging.info("Divide by zero error occurred")
         raise CustomException(e, sys)
-'''    
+'''
