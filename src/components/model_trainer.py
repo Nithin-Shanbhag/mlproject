@@ -30,6 +30,7 @@ class ModelTrainer:
     def initiate_model_trainer(self, train_array, test_array):
         try:
             logging.info("Split training and test input data")
+            ## train test split
             X_train, y_train, X_test, y_test = (
                 train_array[:,:-1],
                 train_array[:,-1],
@@ -37,6 +38,7 @@ class ModelTrainer:
                 test_array[:,-1]
             )
             
+            ## Models list
             models={
                 "Random Forest": RandomForestRegressor(),
                 "Decision Tree": DecisionTreeRegressor(),
@@ -48,6 +50,7 @@ class ModelTrainer:
                 "CatBoosting Regressor": CatBoostRegressor(verbose=False)
             }
             
+            ## Hyperparameters
             params={
                 "Decision Tree": {
                     'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
@@ -92,7 +95,7 @@ class ModelTrainer:
             }
             
             
-            
+            ## refer utils.py
             model_report:dict=evaluate_models(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test,
                                               models=models,param=params)
             

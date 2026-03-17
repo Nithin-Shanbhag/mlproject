@@ -31,9 +31,12 @@ class DataIngestion:
             df=pd.read_csv('notebook/data/stud.csv')
             logging.info("Read the dataset as dataframe")
             
+            ## make artifact directory if not exist
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
             
+            ## save the raw data in data.csv
             df.to_csv(self.ingestion_config.raw_data_path, index=False, header=True)
+            
             logging.info("Train test split initiated")
             train_set, test_set = train_test_split(df, test_size=0.2, random_state=42)
             train_set.to_csv(self.ingestion_config.train_data_path, index=False, header=True)
@@ -62,5 +65,5 @@ if __name__ == "__main__":
     
     model_trainer=ModelTrainer()
     print(model_trainer.initiate_model_trainer(train_arr, test_arr))
-    
+    ## prints r2 score of the best model
     

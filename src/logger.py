@@ -13,7 +13,7 @@ logging.basicConfig(
     format="[%(asctime)s] %(lineno)d %(name)s - %(levelname)s - %(message)s",
     level=logging.INFO
 )
-
+## whenever we want to log something, we can use logging.info().
 
 '''
 ## Testing this logger
