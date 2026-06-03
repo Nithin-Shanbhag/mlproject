@@ -1,3 +1,24 @@
+'''
+## Short summary:
+# define preprocessor pkl file path in datatransformationconfig class
+# data transformation class -
+# create instance var (data_transformation_config) inside init for datatransformationconfig class
+# get_data_transformer_object method -
+# define numerical and categorical columns
+# define numerical and categorical pipeline
+# define preprocessor object by using column transformer that contains num and cat pipelines
+# initiate_data_transformation method -
+# read train and test data
+# get preprocessor object by calling get_data_transformer_object method
+# separate input and target features from train and test data
+# apply preprocessor object on train (fit_transform) and test data (transform)
+# concatenate input and target features for train and test data
+# save preprocessor object in pkl file by calling save_object method
+# return train and test array
+'''
+
+
+
 import sys
 from dataclasses import dataclass
 
@@ -14,7 +35,7 @@ import os
 
 from src.utils import save_object
 
-
+@dataclass
 class DataTransformationConfig:
     preprocessor_obj_file_path = os.path.join('artifacts', 'preprocessor.pkl')
     
@@ -57,6 +78,7 @@ class DataTransformation:
             )
 
             return preprocessor
+        
         except Exception as e:
             raise CustomException(e, sys)
         

@@ -1,3 +1,19 @@
+'''
+Short summary:
+Modeltrainerconfig - to save the model in the given path
+Modeltrainer - to train the model and save the model in the given path
+initiate_model_trainer - 
+1. split the train and test data into input and target features
+2. define the models and their hyperparameters in the form of dictionary
+3. refer utils.py file and use evaluate_models function to train the model and get the model score
+4. fetch the best score and best model name from the model_report returned by the evaluate_models function
+5. if best score is less than 0.6, then raise custom exception "No best model found"
+6. save the best model in the given path using save_object function of utils.py file
+7. predict the test data using best model and calculate r2 score and return it
+'''
+
+
+
 import os
 import sys
 from dataclasses import dataclass
@@ -120,6 +136,7 @@ class ModelTrainer:
             predicted=best_model.predict(X_test)
             
             r2_square=r2_score(y_test, predicted)
+            
             return r2_square
         
         

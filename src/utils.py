@@ -1,3 +1,12 @@
+'''
+import libraries as and when required
+In save object function, we are saving the object passed into the file_path passed
+    extract the directories from file_path and make dirs if not exists
+    open the file_path in write mode and dump the object in file using dill
+In evaluate_models function, we are training, predicting and evaluating the model with hyperparameter tuning using GridSearchCV
+    and returning the report containing test model score for each model.
+'''
+
 import os
 import sys
 
@@ -9,8 +18,11 @@ import dill
 from sklearn.metrics import r2_score
 from src.exception import CustomException
 
+## saving the object in the given path (pickle file)
 def save_object(file_path, obj):
     try:
+        ## dirname will consider path except filename
+        ## and makedirs will create the directory if not exist
         dir_path = os.path.dirname(file_path)
         os.makedirs(dir_path, exist_ok=True)
 
@@ -20,6 +32,8 @@ def save_object(file_path, obj):
     except Exception as e:
         raise CustomException(e, sys)
     
+    
+## train the model, predict and evaluate it with hyperparameter tuning using GridSearchCV
 def evaluate_models(X_train, y_train, X_test, y_test, models, param):
     try:
         report = {}
@@ -43,6 +57,15 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
             report[list(models.keys())[i]] = test_model_score
 
         return report
+
+    except Exception as e:
+        raise CustomException(e, sys)
+    
+## loading the object from the given path (pickle file)
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return dill.load(file_obj)
 
     except Exception as e:
         raise CustomException(e, sys)

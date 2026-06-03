@@ -6,6 +6,7 @@ scikit-learn
 catboost
 xgboost
 dill
+Flask
 
 ## -e . will auto trigger the setup.py file and it will install the mlproject package in the current environment.
-#-e .
+# -e .

@@ -58,4 +58,15 @@ Notebook folder contains dataset and jupyter notebooks containing EDA and model 
 
 ## Step 7:
 
-Write code in data_ingestion.py, data_transformation.py and model_trainer.py
+Write code in [data_ingestion.py](src/components/data_ingestion.py), [data_transformation.py](src/components/data_transformation.py) and [model_trainer.py](src/components/model_trainer.py)
+
+Detailed explanation provided in these files.
+
+## Step 8:
+
+Now I have pickle files for preprocessor and model, lets predict on new data:
+Create the predict_pipeline.py file - contains function to transform the input data to dataframe and return dataframe (CustomData) & a function to load the pickle files, perform transformation on feature data and return prediction (PredictPipeline).
+Create load_object function in utils.py file - to load the pickle file from the file path passed to it.
+Create a flask web application - Create a homepage and /predictdata page.
+    The latter contains a page which displays form for user input and upon submit, it will display predicted output.
+
