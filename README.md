@@ -13,7 +13,7 @@
 Create a new environment for the project
 
 ```
-conda create -p venv python==3.8 -y
+conda create -p venv python==3.14 -y
 ```
 Activate it
 
@@ -104,5 +104,6 @@ Hence I removed xgboost from the requirements.txt file.
 - click on aws elastic beanstalk link after successful deployment
 - click on the url, observe our web application
 
-web application url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/
-append - predictdata - to the url, and observe the model.
+web application homepage url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/
+web application homepage url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/predictdata
+
