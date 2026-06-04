@@ -90,5 +90,10 @@ So step 1 is to create elastic beanstalk instance and also creating an environme
 Now lets create code pipeline and integrate it with our github repo:
 - AWS management console, search: codepipeline (release software for continuous delivery), click on it.
 - Create pipeline
-- pipeline name: studentperformance
-- 
+- category: build custom pipeline, next
+- pipeline name: studentperformance, next
+- source provider: Github via Github app, click connect to github, connect name: studentperformance, connect, repo name: Nithin-Shanbhag/mlproject, branch: main, next
+- skip build stage
+- skip test stage
+- deploy provider: AWS Elastic Beanstalk, app name: studentperformance, env name: Studentperformance-env, next
+- create pipeline
