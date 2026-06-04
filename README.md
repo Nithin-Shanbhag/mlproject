@@ -79,3 +79,16 @@ Configurations to be done:
 
 - push the config to github repo
 
+- Login to AWS management condole, search elastic beanstalk, hover the mouse over it and click on application, got to elastic beanstalk, here you will observe Create application button.
+
+- Theory on deployment:
+AWS Elastic beanstalk is a server/cloud environment of linux instance where I can create an evironment or deploy a code. My code resides in git hub repo and the configuration required by beanstalk is in python.config . To deploy code and any changes done to it from github to cloud, we use code pipeline. Whenever any changes to code is done, it is automatically deployed on click of a button - Do you want to deploy this code. This pipeline is called continuous delivery pipeline. 
+So step 1 is to create elastic beanstalk instance and also creating an environment. step 2 is to integrate codepipeline with github repo and do continuous deploymwent into elastic beanstalk.
+
+- (Continuation) Click on create application, application name: studentperformance, platform: python, application code: sample application - create application (takes some time to create application)
+
+Now lets create code pipeline and integrate it with our github repo:
+- AWS management console, search: codepipeline (release software for continuous delivery), click on it.
+- Create pipeline
+- pipeline name: studentperformance
+- 
