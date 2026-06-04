@@ -96,4 +96,6 @@ Now lets create code pipeline and integrate it with our github repo:
 - skip build stage
 - skip test stage
 - deploy provider: AWS Elastic Beanstalk, app name: studentperformance, env name: Studentperformance-env, next
-- create pipeline
+- click on create pipeline only after the environment is set
+- click on aws elastic beanstalk link after successful deployment
+- click on the url, observe our web application
