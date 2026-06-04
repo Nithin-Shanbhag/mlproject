@@ -70,3 +70,12 @@ Now I have pickle files for preprocessor and model, lets predict on new data:
 
 ### Step 9:
 
+Deployment in AWS Elastic Beanstock:
+Configurations to be done:
+- Create .ebextensions folder in working directory
+- Insdie the folder, create python.config file - used to tell elastic beanstock instance that what is the entry point of the application
+- In python.config, define container as python and WSGIPath (Flask app entry point) as application:application (1st one indicates the Flask app file name, 2nd one indicates the Flask object name in the file)
+- Ensure to remove debug=true in application.py
+
+- push the config to github repo
+
