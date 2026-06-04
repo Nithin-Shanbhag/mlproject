@@ -97,5 +97,12 @@ Now lets create code pipeline and integrate it with our github repo:
 - skip test stage
 - deploy provider: AWS Elastic Beanstalk, app name: studentperformance, env name: Studentperformance-env, next
 - click on create pipeline only after the environment is set
+
+Challenge: Here I encountered deployment error, because while installing dependencies, xgboost package in requirements.txt was installing a huge file: nvidia_nccl_cu12-2.30.4-py3-none-manylinux_2_18_x86_64.whl (300.2 MB)
+Hence I removed xgboost from the requirements.txt file.
+
 - click on aws elastic beanstalk link after successful deployment
 - click on the url, observe our web application
+
+web application url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/
+append - predictdata - to the url, and observe the model.
