@@ -27,7 +27,7 @@ from sklearn.ensemble import(
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 from sklearn.tree import DecisionTreeRegressor
-from xgboost import XGBRegressor
+# from xgboost import XGBRegressor
 from sklearn.neighbors import KNeighborsRegressor
 
 from src.exception import CustomException
