@@ -79,11 +79,11 @@ Configurations to be done:
 
 - push the config to github repo
 
-- Login to AWS management condole, search elastic beanstalk, hover the mouse over it and click on application, got to elastic beanstalk, here you will observe Create application button.
+- Login to AWS management console, search elastic beanstalk, hover the mouse over it and click on application, go to elastic beanstalk, here you will observe Create application button.
 
 - Theory on deployment:
-AWS Elastic beanstalk is a server/cloud environment of linux instance where I can create an evironment or deploy a code. My code resides in git hub repo and the configuration required by beanstalk is in python.config . To deploy code and any changes done to it from github to cloud, we use code pipeline. Whenever any changes to code is done, it is automatically deployed on click of a button - Do you want to deploy this code. This pipeline is called continuous delivery pipeline. 
-So step 1 is to create elastic beanstalk instance and also creating an environment. step 2 is to integrate codepipeline with github repo and do continuous deploymwent into elastic beanstalk.
+AWS Elastic beanstalk is a server/cloud environment of linux instance where I can create an environment or deploy a code. My code resides in git hub repo and the configuration required by beanstalk is in python.config . To deploy code and any changes done to it from github to cloud, we use code pipeline. Whenever any changes to code is done, it is automatically deployed on click of a button - Do you want to deploy this code. This pipeline is called continuous delivery pipeline. 
+So step 1 is to create elastic beanstalk instance and also creating an environment. step 2 is to integrate codepipeline with github repo and do continuous deployment into elastic beanstalk.
 
 - (Continuation) Click on create application, application name: studentperformance, platform: python, application code: sample application - create application (takes some time to create application)
 
@@ -105,5 +105,5 @@ Hence I removed xgboost from the requirements.txt file.
 - click on the url, observe our web application
 
 web application homepage url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/
-web application homepage url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/predictdata
+web application predictpage url: http://studentperformance1-env.eba-qrpw5nfp.ap-southeast-2.elasticbeanstalk.com/predictdata
 

@@ -1,5 +1,5 @@
 '''
-For example lets take try-except dlock, where in try I get div bby zero error
+For example lets take try-except block, where in try I get div by zero error
 except block catches it and passes that exception as e
 CustomException class will be invoked and I will pass e and sys, sys - to extract file number and line number of the error.
 Inside CustomException class, under init method, e and sys will be passed and e will be passes to parent class

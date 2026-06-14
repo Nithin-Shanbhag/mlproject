@@ -5,6 +5,8 @@ In save object function, we are saving the object passed into the file_path pass
     open the file_path in write mode and dump the object in file using dill
 In evaluate_models function, we are training, predicting and evaluating the model with hyperparameter tuning using GridSearchCV
     and returning the report containing test model score for each model.
+In load object function, we are loading the object from the file_path passed
+    open the file_path in read mode and load the object from file using dill
 '''
 
 import os
